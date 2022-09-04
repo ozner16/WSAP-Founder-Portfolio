@@ -1,0 +1,1225 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background: #18191a;
+    min-height: 200vh;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30vh;
+}
+
+
+/* ----------------------Start of NAVIGATION BAR---------------------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 5px 15%;
+    z-index: 100000;
+    height: 80px;
+}
+
+header.sticky {
+    padding: 0px 100px;
+    background: black;
+    height: 75px;
+}
+
+header .logo {
+    padding: 50px 0;
+    height: 55px;
+    width: 55px;
+    background: transparent;
+    border: none;
+    color: #E7D27c;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header .yLogo {
+    height: 80px;
+    margin-bottom: -10px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 40px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.5px;
+    font-weight: 800px;
+    transition: 0.6s;
+}
+
+header ul li .tab:hover {
+    color: #E7D27c;
+    transition: .5s;
+}
+
+header ul li .tab::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #E7D27c;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+
+header ul li .tab:hover::after {
+    width: 100%;
+}
+
+header ul li .btn {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #E7D27c;
+    padding: 9px 28px;
+    border-radius: 30px;
+    line-height: 1.3;
+    color: #E7D27c;
+    font-weight: 500;
+}
+
+header ul li .btn:hover {
+    background: #E7D27c;
+    color: white;
+    transform: scale(1.1);
+    border: 2px solid transparent;
+    transition: .4s;
+}
+
+header ul li .btn:hover i {
+    color: white;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: url(img/universal/background1.gif);
+    background-size: cover;
+    padding-bottom: 7%;
+}
+
+header.sticky .logo header.sticky ul li a {
+    color: white;
+}
+header i {
+    color: #E7D27c;
+}
+
+
+
+/* -------------------------------------------------------------------------End of NAVIGATION BAR----------------------------------------------------------------- */
+
+
+
+
+
+/* ----------------------Start of HOME PAGE---------------------- */
+
+.headerText {
+    padding-top: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 40px;
+}
+
+.headerText h1 {
+    color: white;
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 20px 0px 20px;
+}
+
+.headerText h3 {
+    color: #eee;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.headerText p {
+    width: 440px;
+    max-width: 100%;
+    color: #eee;
+    font-weight: 450;
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.gold{
+    color: #E7D27c;
+}
+
+span {
+    color: #E7D27c;
+}
+
+.social i {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #eee;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 35px;
+}
+
+.social i:hover {
+    transform: scale(1.1);
+    color: #E7D27c;
+    transition: .4s;
+}
+
+/* .banner .download-btn {
+    background-color: #E7D27c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background: #E7D27c;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid #E7D27c;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.banner .download-btn:hover {
+    background: transparent;
+    border: 2px solid #E7D27c;
+    color: #E7D27c;
+    transition: .4s
+} */
+.banner .contact-btn {
+    background-color: #E7D27c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background: #E7D27c;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid #E7D27c;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.banner .contact-btn:hover {
+    background: transparent;
+    border: 2px solid #E7D27c;
+    color: #E7D27c;
+    transition: .4s
+}
+.banner .contact-btn i{
+    padding-left: 6px;
+    color: #eee;
+}
+
+.banner .contact-btn:hover i{
+    color: #E7D27c;
+}
+
+
+/* ----------------------End of HOME PAGE---------------------- */
+
+
+/* ----------------------Start of ABOUT ME---------------------- */
+
+
+.container-about {
+    height: auto;
+    padding: 60px 15%;
+    color: #ababab;
+    background-color: #18191a;
+    /* background: url(./img/universal/proBG.png) no-repeat center; */
+    background-size: cover;
+    border-top: 25px solid #E7D27c;
+    width: 100%;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.about-col-1 {
+    flex-basis: 30%;
+}
+
+.about-col-1 img {
+    width: 120%;
+    border-radius: 35px;
+    margin-top: 1rem;
+}
+
+.about-col-2 {
+    flex-basis: 30%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.about-col-2 p {
+    font-size: 15px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 20px;
+}
+
+.tab-titles p {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links:hover {
+    color: #E7D27c;
+    transition: .5s;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #E7D27c;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 60%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 20px 0;
+    font-size: 19px;
+    text-align: justify;
+    margin-right: 5em;
+}
+
+.tab-contents ul li span {
+    color: #bd8a00;
+    font-size: 17px;
+}
+
+.tab-contents {
+    display: none;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.tab-contents::-webkit-scrollbar {
+    width: 0.8em;
+}
+   
+.tab-contents::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+.tab-contents::-webkit-scrollbar-thumb {
+    background: rgba(231, 210, 124, 0.8);
+    border-radius: 10px;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+#missionvision {
+    white-space: nowrap;
+}
+
+
+/* -------------------------------------------------------------------------End of ABOUT ME----------------------- */
+/* --------------------------------------------------------------------------Start of eventsvenue PH------------------------------------------------------------------------------------------ */
+/* .video {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #18191a;
+    /* background: url(img/universal/plainBG.png); 
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+/* .video .box {
+    position: relative;
+    /* width: 50%;
+    height: 50vh; 
+    filter: grayscale(1);
+     border: 4px solid black;  
+    margin: 0 300px;
+} */
+
+/* .box video {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#video-box-1 {
+    background-color: #18191a;
+    margin-bottom: 20px;
+}
+#video-box-2 {
+    background-color: #18191a;
+    margin-bottom: 10px;
+}
+
+.video .box:hover {
+    filter: grayscale(0);
+}
+
+
+
+.video-column {
+    float: left;
+    width: 50%;
+}
+.video-boxs:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.video-boxs {
+    margin: 0 100px;
+} */
+
+
+/* .video .box video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}  */
+
+
+.video-tab, .video-tab2 {
+    display: grid;
+    margin: 100px 15%;
+    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.video-tab .video-text {
+    text-align: right;
+}
+
+.video-tab .video-text2 {
+    text-align: left;
+}
+
+.video-title {
+    color: #E7D27c;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.video-description {
+    color: #ddd;
+    font-size: 20px;
+}
+
+
+/* ---------------------------------------------------------End of eventsvenue PH------------------------------------------------------------------------------------------ */
+
+/* ----------------------------------------------------------------------Start of ACCOMPLISHMENTS---------------------------------------- */
+#accomplishments {
+    border-top: 25px solid #E7D27c;
+    padding: 100px 16%;
+    background: url(img/universal/proBg.png) no-repeat center;
+}
+
+.subTitle {
+    text-align: center;
+    font-weight: 300;
+    font-size: 50px;
+    color: white;
+}
+
+.accomplishmentsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.accom {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    /* -webkit-text-stroke: 0.5px #ffd325; */
+}
+
+.accom img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.info {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), #cfa601);
+    /* background: linear-gradient(rgba(70, 68, 68, 0.6), #c7bd8f); */
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: justify;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.accom:hover img {
+    transform: scale(1.1);
+    opacity: 20%;
+    transition: 0.5s;
+}
+
+.accom:hover .info {
+    padding: 10px;
+    height: 100%;
+}
+
+.info h3 {
+    font-weight: 1000;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.info p {
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.info a {
+    margin-top: 20px;
+    color: #E7D27c;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------------------End of ACCOMPLISHMENTS----------------------------------------- */
+
+/* ------------------------------------------------------------------------------Start of BRANDS-------------------------------------------------- */
+
+#brands {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #18191a;
+}
+
+.brandsTitle {
+    background-color: #18191a;
+}
+
+.brandsTitle h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #eee;
+}
+
+.brandcontainer {
+    width: 1160px;
+    min-height: 900px;
+    display: flex;
+    background: #0000;
+    margin: 70px auto 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    
+}
+
+.brandcontainer .box {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    background: #0000;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.brandcontainer .box .img-box {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 50rem;
+    
+}
+
+.brandcontainer .box .img-box img {
+    max-width: 100%;
+    transition: transform 1s;
+    opacity: .9;
+}
+
+.brandcontainer .box:hover .img-box img {
+    transform: scale(2.2);
+    opacity: 2;
+}
+
+.brandcontainer .box .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #485252, #2596be);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .apph-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #485252, #2596be);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .ared-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #000000, #d7a44b);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .mrms-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #004aad, #ff595e);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .mp-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #25378d, #efdd3b);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .opc-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #b0b0b0, #ccbe31);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .phs-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #ffa640, #edd797);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .phd-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #6c6862, #b49660);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .pmd-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #311e02, #ceba77);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .pte-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #99968d, #c0ac6c);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .pve-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #927936, #fbbb1d);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .phw-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #60605e, #fbd542);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .tred-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #000, #8c6415);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .wsap-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #644212, #cc9b34);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .panga-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #8a660c, #727272);
+    transform: scaleY();
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .evph-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #c7a62c, #acacac);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 50rem;
+}
+
+.brandcontainer .box .samley-img .text {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    bottom: 35px;
+    right: 30px;
+    background: linear-gradient(to right, #535353, #d7ad58);
+    transform: scaleY(0);
+    transition: transform .5s;
+    border-radius: 40rem;
+}
+.brandcontainer .box:hover .text {
+    transform: scaleY(1);
+}
+
+.brandcontainer .box .text .content {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    bottom: 10%;
+    right: 10%;
+    text-align: center;
+    padding: 5px;
+    color: #ffff;
+    border-radius: 40rem;
+}
+
+.brandcontainer .box .details .content h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #ffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.brandcontainer .box .detaills .content p {
+    margin: 0;
+    padding: 0;
+    font-size: 18p;
+    color: #ffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+i {
+    color: #666362;
+}
+
+/* ---------------------------------------------------------------------------------End of BRANDS------------------------------------------------------------------------------------ */
+/* -----------------------------------------------------------------------Start of advocacy TULONG NI JUAN FOUNDATION------------------------------------------------------------------------- */
+
+#advocacy-tab {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: auto;
+    background-color: #12181B;
+    border-top: 25px solid #E7D27c;
+}
+
+.advocacy-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    color: #E7D27c;
+    margin-bottom: 40px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #E7D27c;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color:#E7D27c;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* -----------------------------------------------------------------------End of Advocacy(TULONG NI JUAN FOUNDATION)--------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------Start of CONTACT ME---------------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+}
+
+.contact-section {
+    border-bottom: 25px solid #E7D27c;
+    border-top: 25px solid #E7D27c;
+    background: url(./img/universal/plainBG.png) no-repeat center;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.contact-section h1 {
+    text-align: center;
+    color: #ddd;
+    margin: 10px 0;
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #ddd;
+}
+
+.border {
+    width: 100px;
+    height: 10px;
+    background: #E7D27c;
+    margin: 40px auto;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+}
+
+.contact-form-text:focus {
+    box-shadow: 0 0 10px 4px #E7D27c;
+}
+
+textarea.contact-form-text {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn {
+    float: right;
+    border: 0;
+    background: #E7D27c;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact-form-btn:hover {
+    background: #E7D27c;
+}
+
+
+/* ----------------------End of CONTACT ME---------------------- */
+/* --------------------------------------------------------------- Start of Footer -------------------------------------------------------------- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10%;
+    position: relative;
+    width: 100%;
+    background: #E7D27c;
+    padding: 10px 15px;
+    flex-direction: column;
+}
+
+footer .container{
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 0px;
+    align-content: center;
+}
+
+footer .footer-col{
+    width: flex;
+    padding: 0 10px;
+    margin: 0 80px;
+}
+
+footer .footer-col i{
+    font-size: 30px;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+footer .footer-col .social-links i:hover {
+    transform: translateY(-10px);
+}
+
+footer .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -100px;
+    margin-top: 10px;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    margin-top: -20px;
+}
+
+footer img{
+    width: 200px;
+}
+
+footer .footer-col h2{
+    font-size: 20px;
+	color: #666362;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h2::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -15px;
+	background-color: rgb(2, 2, 5);
+	height: 2px;
+	box-sizing: border-box;
+	width: 120px;
+}
+
+footer .footer-col h3{
+    font-size: 15px;
+    color: #666362;
+    text-transform: capitalize;
+}
+
+
+footer .arrowUp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 2em;
+    color: white;
+    margin-left: 40px;
+    display: inline-block;
+    transition: 0.5s;
+    
+}
+
+footer .arrowUp:hover {
+    transform: translateY(-10px);
+}
+
+footer .arrowUp i{
+    align-content: center;
+}
+
+footer .arrowTitle {
+    color: black;
+    font-weight: 200px;
+    margin-bottom: 30px;
+}
+
+footer .cTitle {
+    color: black;
+    font-weight: 200px;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(img/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+
+
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}

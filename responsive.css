@@ -1,0 +1,681 @@
+/**************************************************************************************************
+***************************************Mobile***********************************************************
+************************************************************************************************/
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  
+  .menu > li {
+    overflow: hidden;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+  @media (max-width: 480px) {
+
+    /***************************************************************Header**************************************/
+  
+      header {
+          padding: 0px 50px;
+          background-color: rgba(0, 0, 0, 0.4);
+          height: 75px;
+      }
+      header ul li:hover {
+          color: transparent;
+      }
+  
+      header.sticky {
+          padding: 0 50px;
+      }
+  
+      .logo img {
+          width: 35px;
+          height: 35px;
+      }
+  
+      header ul li .btn {
+          border: none;
+          position: relative;
+          text-decoration: none;
+          color: white;
+          letter-spacing: 0.5px;
+          font-weight: 800px;
+          padding-top: 0;
+      }
+  
+      .menu li .btn:hover {
+          background-color: none;
+          scale: 0.9;
+          background-color:transparent;
+          border: none;
+      }
+  
+      .menu-button-container {
+          display: flex;
+      }
+      .menu {
+          position: absolute;
+          top: 15px;
+          margin-top: 50px;
+          left: 0;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+      }
+      #menu-toggle ~ .menu li {
+          height: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      #menu-toggle:checked ~ .menu li {
+          border: 1px solid #333;
+          height: 2.5em;
+          padding: 0.5em;
+          transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .menu > li {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0.5em 0;
+          width: 100%;
+          color: white;
+          background-color: #222;
+      }
+      .menu > li:not(:last-child) {
+          border-bottom: 1px solid #444;
+      }
+  
+      .menu li a i {
+          display: none;
+      }
+  
+  
+/***************************************************************Banner**************************************/
+      .banner {
+          background-position: 70% 50%;
+          min-height: 100vh;
+          padding-bottom: 25%;
+  
+      }
+  
+      .headerText p {
+        font-size: 18px;
+      }
+      .headerText{
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 350px;
+          padding-bottom: 0px;
+      }
+  
+      .headerText h1 {
+          font-size: 35px;
+          margin-bottom: 20px;
+      }
+  
+      .social i {
+          width: 50px;
+          height: 50px;
+      }
+  
+      .contact-btn {
+          width: 100%;
+      }
+  
+
+/***************************************************************About Me**************************************/
+  
+      .container-about .row{
+        height: auto;
+      }
+      .about-col-1{
+          display: none;
+      }
+  
+      .about-col-2{
+        width: 100%;
+        flex-basis: 100%;
+      }
+
+      .about-col-2 .descriptionMe {
+        margin-right: 20px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .about-col-2 .tab-links {
+        font-size: 20px;
+        margin-right: 20px;
+      }
+
+      .tab-titles {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 10px;
+      }
+      .tab-links.active-link::after {
+        width: 100%;
+    }
+    
+  
+      .tab-contents {
+        margin-right: 20px;
+        height: auto;
+      }
+
+      .tab-contents ul {
+        height: auto;
+      }
+  
+      .tab-contents ul li {
+          font-size: 15px;
+          margin-right: 20px;
+      }
+  
+      .container-about {
+          padding-top: 15px;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 20px;
+          overflow: hidden;
+          height: auto;
+      }
+  
+      .container-about h1 {
+          font-size: 30px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+      }
+  
+      .container-about p {
+          white-space: normal;
+          margin-right: 20px;
+      }
+  
+      #missionvison {
+        display: block;
+      }
+
+
+  
+/***************************************************************Video**************************************/
+      /* .video {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: auto;
+          
+      }
+  
+      .video .box .clip {
+          width: 90%;
+          margin-left: 20px;
+          margin-right: 20px;
+      } */
+
+      .video-tab, .video-tab2 {
+        margin: 100px 20px;
+      }
+
+      .video-tab {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .video-tab2 {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .video-tab .video-text, .video-tab2 .video-text, .video-tab .video-text2, .video-tab2 .video-text2 {
+        text-align: center;
+     }
+
+     .video-title {
+        font-size: 30px;
+     }
+     .video-description {
+        font-size: 18px;
+     }
+
+/***************************************************************Accomplishments**************************************/
+      #accomplishments {
+          padding: 20px;
+      }
+  
+      #accomplishments .subTitle {
+          font-size: 30px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+      }
+
+      .info h3 {
+        font-size: 18px;
+      }
+
+      .info p {
+        font-size: 14px;
+      }
+
+/***************************************************************Services**************************************/
+      .services-tab {
+          padding-bottom: 30px;
+      }
+      .services-text {
+          padding-top: -20px;
+      }
+      .services-tab .cards{
+          margin-left: 20px;
+          margin-right: 20px;
+      }
+      .card-overlay p{
+        font-size: 15px;
+      }
+
+
+/***************************************************************Brands**************************************/
+      .brandcontainer {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          width: auto;
+          padding-bottom: 0;
+          margin-left: 20px;
+          margin-right: 20px;
+      }
+  
+      .brandsTitle h2{
+          font-size: 30px;
+          padding-top: 20px;
+      }
+  
+      .brandcontainer .box {
+          max-width: 90px;
+          max-height: 90px;
+      }
+
+      .brandcontainer .box:hover {
+        color: rgba(255 255 255 1);
+      }
+
+      .img-box .text {
+        display: none;
+      }
+      
+/***************************************************************Advocacy**************************************/
+      #advocacy-tab {
+          height: auto;
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+  
+      .advocacy-title {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          font-size: 30px;
+      }
+  
+/***************************************************************Contact**************************************/
+      .contact-section {
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+
+      form .contact-form-btn {
+        width: 100%;
+        height: 60px;
+        border-radius: 30px;
+      }
+
+
+
+      .container .row {
+        display: grid;
+        align-items: center;
+      }
+
+      .footer-col h2 {
+        text-align: center;
+      }
+
+      .footer-col ul li h3 {
+        margin-bottom: 30px;
+      }
+      .footer-col h2::before {
+        width: 0;
+
+      }
+
+      footer .footer-col {
+        display: grid;
+        margin: 0 60px;
+        place-content: center;
+      }
+
+      .social-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-content: center;
+      }
+
+
+  }
+
+
+
+
+
+/**************************************************************************************************
+***************************************TABLET***********************************************************
+************************************************************************************************/
+
+@media (min-width:481px) and (max-width:1040px) {
+    header{
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header.sticky {
+        padding: 0 20px;
+    }
+
+    /***************************************************************Banner**************************************/
+    .banner {
+        background-position: 70% 50%;
+        min-height: 100vh;
+        padding-bottom: 25%;
+
+    }
+
+    .headerText p {
+      font-size: 18px;
+    }
+    .headerText{
+        min-height: 130vh;
+        margin-bottom: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 75px;
+        padding-bottom: 20px;
+    }
+    
+    .headerText p {
+        margin-bottom: 10px;
+    }
+    header ul li a {
+        margin: 0 15px;
+        font-size: 15px;
+    }
+
+    .headerText h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .social i {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+
+
+/***************************************************************About Me**************************************/
+
+    .about-col-1{
+        display: none;
+    }
+
+    .about-col-2{
+        height: auto;
+        padding-bottom: 20px;
+        flex-basis: 70%;
+    }
+
+    .about-col-2 .descriptionMe {
+      margin-right: 60px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .about-col-2 .tab-links {
+      font-size: 20px;
+      margin-right: 20px;
+    }
+
+
+    .tab-contents {
+        margin-right: 20px;
+    }
+
+    .tab-contents ul li {
+        font-size: 15px;
+        margin-right: 20px;
+    }
+
+    .container-about {
+        padding-top: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .container-about h1 {
+        font-size: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+    .container-about .row{
+        height: auto;
+    }
+
+/***************************************************************Video**************************************/
+    /* .video {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      height: auto;
+      background-color: #222;
+        
+    }
+
+    .video .box .clip {
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
+    } */
+
+    .video-tab, .video-tab2 {
+        margin: 100px 20px;
+      }
+
+    .video-title {
+        font-size: 30px;
+     }
+     .video-description {
+        font-size: 18px;
+     }
+
+/***************************************************************Accomplishments**************************************/
+    #accomplishments {
+        padding: 20px;
+    }
+
+    #accomplishments .subTitle {
+        font-size: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+/***************************************************************Services**************************************/
+    .services-tab {
+        padding-bottom: 30px;
+    }
+    .services-text {
+        font-size: 30px;
+        padding-top: -20px;
+    }
+    .services-tab .cards{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+/***************************************************************Brands**************************************/
+    .brandcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: auto;
+        padding-bottom: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .brandsTitle h2{
+        font-size: 30px;
+        padding-top: 20px;
+    }
+
+    .brandcontainer .box {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .brandcontainer .box:hover {
+      color: rgba(255 255 255 1);
+    }
+    
+/***************************************************************Advocacy**************************************/
+    #advocacy-tab {
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .advocacy-title {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .slideshow-container {
+        width: 500px;
+    }
+
+/***************************************************************Contact**************************************/
+    .contact-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    form .contact-form-btn {
+      width: 100%;
+      height: 60px;
+      border-radius: 30px;
+    }
+
+    .container .row {
+        display: grid;
+        align-items: center;
+      }
+
+      .footer-col h2 {
+        text-align: center;
+      }
+
+      .footer-col ul li h3 {
+        margin-bottom: 30px;
+      }
+      .footer-col h2::before {
+        width: 0;
+
+      }
+
+      footer .footer-col {
+        display: grid;
+        margin: 0 60px;
+        place-content: center;
+      }
+
+      .social-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-content: center;
+      }
+
+
+}
+
+
+
+
+@media (min-height:600px){
+    .headerText{
+        padding-top: 40vh;
+    }
+
+    
+
+}
